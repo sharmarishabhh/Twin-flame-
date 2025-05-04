@@ -1,0 +1,202 @@
+/* General Styles */
+.chatroom-container body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Chatroom Container */
+.chatroom-container .min-h-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatroom-container .backgroundc {
+  background: linear-gradient(145deg, #ff4e62, #f33b92);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Heading */
+.chatroom-container .heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Messages Section */
+.chatroom-container .chat {
+  height: 450px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chatroom-container .chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatroom-container .chat::-webkit-scrollbar-thumb {
+  background: #f33b92;
+  border-radius: 4px;
+}
+
+.chatroom-container .chat::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* Chat Message Styles */
+.chatroom-container .chat div {
+  margin-bottom: 15px;
+  animation: slideIn 0.4s ease;
+}
+
+.chatroom-container .chat div p {
+  margin: 5px 0;
+}
+
+.chatroom-container .chat div p:first-child {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+.chatroom-container .chat div .bg-green-500 {
+  background: linear-gradient(145deg, #36d1dc, #5b86e5);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  max-width: 60%;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatroom-container .chat div .bg-gray-300 {
+  background: #f1f1f1;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  max-width: 60%;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Section */
+.chatroom-container form {
+  display: flex;
+  gap: 10px;
+}
+
+.chatroom-container input {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chatroom-container input:focus {
+  outline: none;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chatroom-container button {
+  background: linear-gradient(145deg, #ff4e62, #f33b92);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatroom-container button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(145deg, #f33b92, #ff4e62);
+}
+
+/* Active Users Section */
+.chatroom-container .active-users {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.chatroom-container .active-users img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.chatroom-container .active-users img:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .chatroom-container .backgroundc {
+    padding: 15px;
+  }
+
+  .chatroom-container .chat {
+    height: 350px;
+  }
+
+  .chatroom-container input {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .chatroom-container button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
